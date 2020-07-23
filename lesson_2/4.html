@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
+параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их
+и возвращать результат.
+Обязательно использовать оператор return.
+-->
+    <script>
+        'use strict';
+
+        function summ_numbers(a, b) {
+            return a + b
+        };
+
+        function dif_numbers(a, b) {
+            return a - b
+        };
+
+        function multyply_numbers(a, b) {
+            return a * b
+        };
+
+        function divide_numbers(a, b) {
+            return a / b
+        };
+        
+        let a = +prompt('Введите целое число');
+        let b = +prompt('Введите целое число');
+        
+        console.log("результат сложения: ", summ_numbers(a, b));
+        console.log("результат вычитания: ", dif_numbers(a, b));
+        console.log("результат умножения: ", multyply_numbers(a, b));
+        console.log("результат деления: ", divide_numbers(a, b));
+    </script>
+</body>
+
+</html>
