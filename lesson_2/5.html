@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+    Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+переданного значения операции (использовать switch) выполнить одну из арифметических
+операций
+(использовать функции из задания 4) и вернуть полученное значение.
+-->
+<script>
+'use strict'
+    function summ_numbers(a, b) {
+            return a + b
+        };
+
+        function dif_numbers(a, b) {
+            return a - b
+        };
+
+        function multyply_numbers(a, b) {
+            return a * b
+        };
+
+        function divide_numbers(a, b) {
+            return a / b
+        };
+    
+    function mathOperation(arg1, arg2, operation){
+    switch(operation){
+        case '+':
+        return summ_numbers(arg1, arg2);
+        case '-':
+        return dif_numbers(arg1, arg2);
+        case '/':
+        return divide_numbers(arg1, arg2);
+        case '*':
+        return multyply_numbers(arg1, arg2);
+            }
+    };
+    
+let a = +prompt('Введите число 1');
+let b = +prompt('Введите число 2');
+let operation = prompt('что сделать?');
+
+let result = mathOperation(a,b, operation)
+alert(`результат: ${result}`)
+    
+</script>
+</body>
+</html>
