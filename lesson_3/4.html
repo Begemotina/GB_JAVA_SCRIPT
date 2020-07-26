@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <!--4 Перед вами находится массив с продуктами, сегодня распродажа и вам нужно на каждый товар применить скидку
+15%, можете использовать метод forEach https://mzl.la/1AOMMWX :
+const products = [
+{
+id: 3,
+price: 200,
+},
+{
+id: 4,
+price: 900,
+},
+{
+id: 1,
+price: 1000,
+},
+];-->
+    <script>
+         'use strict'
+        const products = [
+            {
+                id: 3
+                , price: 200
+            , }
+            , {
+                id: 4
+                , price: 900
+            , }
+            , {
+                id: 1
+                , price: 1000
+            , }
+, ];
+        //у нас распродажа на один день, и было бы правильно сохранить старые цены
+        let sale_products = products.slice();
+        let discount = 15 //скидка в процентах
+        sale_products.forEach(item => item.price = item.price - item.price * discount / 100);
+        sale_products.forEach(item => console.log(item.price));
+    </script>
+</body>
+
+</html>
