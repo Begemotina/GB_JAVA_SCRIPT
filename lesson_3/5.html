@@ -39,7 +39,7 @@ https://mzl.la/2Y79hbZ , как устроен sort можно посмотре�
             , {
                 id: 8
                 , price: 78
-    , }
+            , }
 , ];
 
         function is_photo(item) {
@@ -52,11 +52,9 @@ https://mzl.la/2Y79hbZ , как устроен sort можно посмотре�
         }
         let products_photos = products.filter(is_photo);
         let products_sorted = products.slice()
-        
-        products_sorted = products_sorted.sort(function(a, b){
+        products_sorted = products_sorted.sort(function (a, b) {
             return a.price - b.price
         })
-
         console.log(products_photos)
         console.log(products_sorted)
     </script>
