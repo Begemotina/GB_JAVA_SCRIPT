@@ -1,0 +1,37 @@
+table {
+    margin: 8px;
+    border-collapse: collapse;
+}
+
+td span {
+    display: inline-block;
+    font-size: 2em;
+}
+
+td {
+    width: 48px;
+    height: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    background-color: #a29a9d;
+    border: 1px solid #251c1c;
+}
+.chessboard td.black {
+    background-color: #605c64;
+}
+
+tr:first-child td,
+tr:last-child td,
+td:last-child,
+td:first-child {
+    background-color: transparent;
+    color: #605c64;
+   font-size:10px;
+    border-color: white;
+}
+
+.pawns .cell,
+.figures .cell {
+    color: #d6d0d0;
+}
