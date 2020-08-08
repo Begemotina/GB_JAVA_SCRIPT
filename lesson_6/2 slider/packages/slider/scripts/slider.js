@@ -93,7 +93,12 @@ let images = {
         } else {
             this.currentIdx--;
         }
-
+        const currentSlide = this.slides[this.currentIdx];
+        currentSlide.classList.add('animate__animated', 'animate__fadeInRight');
+        currentSlide.classList.remove('hidden-slide');
+        setTimeout(function () {
+            currentSlide.classList.remove('animate__animated', 'animate__fadeInRight');
+        },1000)
         this.showImageWithCurrentIdx();
     },
 
@@ -106,7 +111,11 @@ let images = {
             this.currentIdx++;
         }
         const currentSlide = this.slides[this.currentIdx];
-        currentSlide.classList.add('animate__animated animate__slideOutLeft')
+        currentSlide.classList.add('animate__animated', 'animate__fadeInLeft');
+        currentSlide.classList.remove('hidden-slide');
+        setTimeout(function () {
+            currentSlide.classList.remove('animate__animated', 'animate__fadeInLeft');
+        },1000)
         this.showImageWithCurrentIdx();
     },
 }
