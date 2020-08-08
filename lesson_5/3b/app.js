@@ -21,4 +21,5 @@ hide_button.addEventListener('click', function () {
 show_button.addEventListener('click', function () {
     modal_window.classList.remove( 'hidden', 'animate__rollOut' );
     modal_window.classList.add('animate__animated', 'animate__rollIn');
+
 });
