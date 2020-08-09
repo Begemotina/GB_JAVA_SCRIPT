@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tusk1</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    'use strict';
+
+    function Product (name, prise) {
+        this.name = name;
+        this.prise = prise;
+    }
+
+    Product.prototype.make25PercentDiscount = function () {
+        this.prise = this.prise - this.prise * 0.25;
+    }
+
+    const prod1 = new Product('cookies', 100)
+    console.log(prod1.name)
+    console.log(prod1.prise) // цена до скидки
+    prod1.make25PercentDiscount()
+    console.log(prod1.prise) // цена после скидки
+
+</script>
+</body>
+</html>

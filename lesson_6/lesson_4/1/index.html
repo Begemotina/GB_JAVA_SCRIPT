@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tusk1</title>
+
+</head>
+<body>
+<script>
+    'use strict';
+    const number = 21;
+    if (!Number.isInteger(number) || number > 999 || number < 0) {
+            console.log("Это должно быть число в от 0 до 999");
+    }else {
+        const numberObj = {
+            units: number % 10,
+            tens: Math.floor((number / 10) % 10),
+            hundreds: Math.floor(number / 100),
+        }
+        console.log(numberObj);
+    }
+
+</script>
+</body>
+</html>

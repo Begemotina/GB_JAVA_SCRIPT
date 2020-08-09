@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tusk1</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    class Post {
+        constructor (author, text, data) {
+            this.author = author;
+            this.text = text;
+            this.data = data;
+        }
+    }
+
+    class AttachedPost extends Post {
+        constructor(author, text, date) {
+            super(author, text, date);
+            this.highlighted = false;
+        }
+    }
+
+
+    //post
+    Post.prototype.edit = function (text) {
+        this.text = text
+    }
+    const post1 = new Post('cookies', 'очень длинный текст', new Date);
+    console.log(post1.author)
+    console.log(post1.text)
+    post1.edit('другой очень длинный текст')
+    console.log(post1.text)
+
+    //AttachedPost
+    AttachedPost.prototype.makeTextHighlighted = function () {
+        this.highlighted = true;
+        }
+    const attachedPost1 = new AttachedPost('печенюшечка', 'очень длинный текст', new Date)
+    console.log(attachedPost1.author)
+    console.log(attachedPost1.highlighted)
+    attachedPost1.makeTextHighlighted();
+    console.log(attachedPost1.highlighted);
+
+</script>
+</body>
+</html>
